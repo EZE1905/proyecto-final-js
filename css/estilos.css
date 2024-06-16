@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/** LOGIN **/
+
+body{
+    background-color: #000;
+    color: #f3f3f3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 25px;
+    font-size: 35px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    border: solid 2px #4bdf10;
+    border-radius: 5px;
+    padding: 20px;
+    width: 500px;
+    margin: 0 auto;
+    box-shadow: #4bdf10 0 0 10px;
+}
+
+.input-login{
+    width: 300px;
+    height: 30px;
+    margin: 20px 0 0;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    border-left: #4bdf10 2px solid;
+    background-color: transparent;
+    color: #f3f3f3;
+    transition: border-bottom 0.2s, border-left 0.2s;
+    font-weight: 500;
+}
+
+.input-login:focus{
+    outline: none;
+    border-left: none;
+    border-bottom: #4bdf10 2px solid;
+}
+
+.btn-login{
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    margin: 30px 0 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: #4bdf10 2px solid;
+    background-color: transparent;
+    color: #f3f3f3;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.btn-login:hover{
+    background-color: #4bdf10;
+    color: #000;
+    box-shadow: #4bdf10 0 0 10px;
+}
+
+.title-video{
+    text-align: center;
+    margin: 80px;
+}
+
+/** LIGTH MODE **/
+
+#ligth-mode{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.light-mode{
+    background-color: #e3e3e3;
+    color: #000;
+}
+
+.light-mode .form{
+    border: solid 2px #d305c2;
+    box-shadow: #d305c2 0 0 10px;
+}
+
+.light-mode .input-login{
+    border-left: #d305c2 2px solid;
+    color: #000;
+}
+
+.light-mode .input-login:focus{
+    border: none;
+    border-bottom: #d305c2 2px solid;
+}
+
+.light-mode .btn-login{
+    color: #000;
+    border: #d305c2 2px solid;
+    box-shadow: #d305c2 0 0 10px;
+}
+
+.light-mode .btn-login:hover{
+    background-color: #d305c2;
+    color: #e3e3e3;
+}
+
+/** TOASTIFY **/
+
+.info{
+    box-shadow: none;
+}
