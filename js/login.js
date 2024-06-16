@@ -12,7 +12,7 @@ function login(){
             }
         }).showToast();
         setTimeout(() => {
-            window.location = "index.html" 
+            window.location = "info.html" 
         }, 1000)
     }else{
         Toastify({
