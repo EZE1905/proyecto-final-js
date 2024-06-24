@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Seguimiento de Hábitos</title>
+    <link rel="shortcut icon" href="img/login icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <span id="ligth-mode">☀️</span>
+        <h1>Seguimiento de Hábitos</h1>
+        <form id="habit-form">
+            <input class="input" type="text" id="habit-name" placeholder="Nombre del hábito" required>
+            <button type="submit">Añadir Hábito</button>
+        </form>
+        <button id="clear-habits" class="clear-button">Borrar Todos los Hábitos</button>
+        <ul id="habit-list"></ul>
+        <canvas id="habit-chart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

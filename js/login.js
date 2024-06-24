@@ -12,7 +12,7 @@ function login(){
             }
         }).showToast();
         setTimeout(() => {
-            window.location = "info.html" 
+            window.location = "main.html" 
         }, 1000)
     }else{
         Toastify({
@@ -32,17 +32,39 @@ btnLogin.addEventListener("click", login)
 
 const modoClaroBoton = document.querySelector("#ligth-mode");
 
-function modoClaro() {
-    modoClaroBoton.addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
+// Función para guardar la preferencia de modo claro en localStorage
+const guardarModoClaro = () => {
+    if (document.body.classList.contains("light-mode")) {
+        localStorage.setItem('modoclaro', 'true');
+        modoClaroBoton.textContent = "🌙";
+    } else {
+        localStorage.setItem('modoclaro', 'false');
+        modoClaroBoton.textContent = "☀️";
+    }
+};
 
-        if (document.body.classList.contains("light-mode")) {
-            modoClaroBoton.textContent = "🌙";
-        } else {
-            modoClaroBoton.textContent = "☀️";
-        }
-    })
-}
+// Función para cargar la preferencia de modo claro desde localStorage
+const cargarModoClaro = () => {
+    const modoclaroGuardado = localStorage.getItem('modoclaro');
+    if (modoclaroGuardado === 'true') {
+        document.body.classList.add("light-mode");
+        modoClaroBoton.textContent = "🌙";
+    } else {
+        document.body.classList.remove("light-mode");
+        modoClaroBoton.textContent = "☀️";
+    }
+};
 
-// Llamada a la función
-modoClaro();
+// Función para alternar el modo claro/oscuro
+const alternarModoClaro = () => {
+    document.body.classList.toggle("light-mode");
+    guardarModoClaro();
+};
+
+// Asignar evento de clic al botón de modo claro/oscuro
+modoClaroBoton.addEventListener('click', alternarModoClaro);
+
+// Cargar la preferencia de modo claro al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    cargarModoClaro();
+});
